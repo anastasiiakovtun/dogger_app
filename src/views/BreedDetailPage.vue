@@ -16,7 +16,8 @@ const { data, isLoading, isError } = useQuery({
   queryFn: async () => {
     const response = await axios.get(`https://dog.ceo/api/breed/${breed}/images/random`)
     return response.data.message
-  }
+  },
+  staleTime: Infinity
 })
 </script>
 

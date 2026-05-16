@@ -11,7 +11,8 @@ const { data, isLoading, isError } = useQuery({
   queryFn: async () => {
     const response = await axios.get('https://dog.ceo/api/breeds/list/all')
     return Object.keys(response.data.message)
-  }
+  },
+  staleTime: Infinity
 })
 
 const filtered = computed(() => {
