@@ -1,14 +1,21 @@
 import { createRouter, createWebHistory } from "vue-router"
-
-const routes = [
-],
+import BreedOverview from '../views/BreedOverview.vue'
+import BreedDetail from '../views/BreedDetailPage.vue'
 
 const router = createRouter({
-    history: createWebHistory(),
-    routes,
-    scrollBehavior() {
-        return { top: 0 }
+  history: createWebHistory(),
+  routes: [
+    {
+      path: '/',
+      component: BreedOverview
+    },
+    {
+      path: '/breed/:breed',
+      component: BreedDetailPage
     }
+  ]
 })
+
+export default router
 
 export default router
