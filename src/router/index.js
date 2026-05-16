@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router"
 import BreedOverview from '../views/BreedOverview.vue'
-import BreedDetail from '../views/BreedDetailPage.vue'
+import BreedDetailPage from '../views/BreedDetailPage.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -15,7 +15,5 @@ const router = createRouter({
     }
   ]
 })
-
-export default router
 
 export default router

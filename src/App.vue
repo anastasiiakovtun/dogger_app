@@ -1,11 +1,23 @@
 <script setup>
-
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <h1>Dogger APP</h1>
+  <div>
+    <Transition name="fade" mode="out-in">
+      <RouterView />
+    </Transition>
+  </div>
 </template>
 
-<style scoped="scss">
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
 
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 </style>
